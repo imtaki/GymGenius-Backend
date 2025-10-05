@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/users/{userId}/plans")
+@RequestMapping("/api/v1/users/{userId}/plans")
 @RequiredArgsConstructor
 public class WorkoutPlanController {
     private final WorkoutPlanService workoutPlanService;
@@ -32,7 +32,7 @@ public class WorkoutPlanController {
     }
 
     @PostMapping
-    public ResponseEntity<WorkoutPlan> createPlan(@PathVariable Long userId, @RequestBody WorkoutPlan plan) {
-        return ResponseEntity.ok(workoutPlanService.createPlan(userId, plan));
+    public ResponseEntity<WorkoutPlanDTO> createPlan(@PathVariable Long userId, @RequestBody WorkoutPlanDTO dto) {
+        return ResponseEntity.ok(workoutPlanService.createWorkoutPlan(userId, dto));
     }
 }
