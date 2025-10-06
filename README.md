@@ -1,4 +1,4 @@
-# 🏋️ GymGenius Backend (Spring Boot + PostgreSQL)
+# 🏋️ Gym Backend (Spring Boot + PostgreSQL)
 
 ## 📌 Overview
 
